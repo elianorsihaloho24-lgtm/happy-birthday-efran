@@ -7,6 +7,7 @@
 
 <style>
 body{
+  
 margin:0;
 display:flex;
 justify-content:center;
@@ -79,6 +80,9 @@ opacity:0;
 </head>
 
 <body>
+<audio id="musik" loop>
+    <source src="music.mp3" type="audio/mpeg">
+</audio>
 
 <div class="card">
 
@@ -135,6 +139,15 @@ Love,
 Erni`;
 
 function bukaSurat(){
+function bukaSurat(){
+
+document.getElementById("musik").play();
+
+document.querySelector("button").style.display="none";
+
+let s=document.getElementById("surat");
+
+s.style.display="block";
 
 document.querySelector("button").style.display="none";
 
