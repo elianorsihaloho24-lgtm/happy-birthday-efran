@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Happy Birthday Efran ❤️</title>
+
+<style>
+body{
+margin:0;
+display:flex;
+justify-content:center;
+align-items:center;
+height:100vh;
+background:linear-gradient(135deg,#ff9ecb,#ffc8dd,#ffe5ec);
+font-family:Arial,sans-serif;
+overflow:hidden;
+}
+
+.card{
+background:white;
+padding:40px;
+border-radius:25px;
+box-shadow:0 0 30px rgba(0,0,0,.2);
+text-align:center;
+width:85%;
+max-width:600px;
+z-index:2;
+}
+
+h1{
+color:#ff2d75;
+font-size:45px;
+}
+
+p{
+font-size:20px;
+line-height:35px;
+}
+
+button{
+padding:15px 35px;
+font-size:20px;
+background:#ff2d75;
+color:white;
+border:none;
+border-radius:50px;
+cursor:pointer;
+}
+
+button:hover{
+background:#ff4f8f;
+}
+
+#surat{
+display:none;
+margin-top:25px;
+white-space:pre-line;
+}
+
+.heart{
+position:absolute;
+color:red;
+animation:fall linear infinite;
+}
+
+@keyframes fall{
+0%{
+transform:translateY(-100px);
+opacity:1;
+}
+100%{
+transform:translateY(110vh);
+opacity:0;
+}
+}
+</style>
+
+</head>
+
+<body>
+
+<div class="card">
+
+<h1>🎂 Happy Birthday Efran ❤️</h1>
+
+<p>Dari Erni 💖</p>
+
+<button onclick="bukaSurat()">
+Open My Heart ❤️
+</button>
+
+<div id="surat"></div>
+
+</div>
+
+<script>
+
+for(let i=0;i<40;i++){
+
+let h=document.createElement("div");
+
+h.className="heart";
+
+h.innerHTML="❤️";
+
+h.style.left=Math.random()*100+"%";
+
+h.style.fontSize=(15+Math.random()*30)+"px";
+
+h.style.animationDuration=(4+Math.random()*5)+"s";
+
+document.body.appendChild(h);
+
+}
+
+const text=`Hai Sayang ❤️
+
+Selamat ulang tahun yaa Efran.
+
+Semoga di umurmu yang baru ini kamu selalu diberikan kesehatan, kebahagiaan, rezeki yang melimpah, dan semua impianmu bisa tercapai.
+
+Terima kasih karena sudah hadir di hidupku.
+
+Terima kasih karena selalu membuatku tersenyum.
+
+Aku bersyukur bisa mengenalmu.
+
+Aku berharap kita masih bisa merayakan ulang tahunmu bersama di tahun-tahun berikutnya.
+
+I Love You Forever ❤️
+
+Love,
+
+Erni`;
+
+function bukaSurat(){
+
+document.querySelector("button").style.display="none";
+
+let s=document.getElementById("surat");
+
+s.style.display="block";
+
+let i=0;
+
+function ketik(){
+
+if(i<text.length){
+
+s.innerHTML+=text.charAt(i);
+
+i++;
+
+setTimeout(ketik,40);
+
+}
+
+}
+
+ketik();
+
+}
+
+</script>
+
+</body>
+</html>
